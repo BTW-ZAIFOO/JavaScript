@@ -1,76 +1,72 @@
-// IF (code run if the condition is true)
-
-
-let age=17;
-if (age<=17) {
-    console.log("You are not adult");
+// IF Statement (executes code if the condition is true)
+let temperature = 15;
+if (temperature <= 15) {
+    console.log("It's a cold day.");
 }
 
-let number = 5;
+let score = 8;
 
-if (number > 0) {
-    console.log("The number is positive.");
+if (score > 0) {
+    console.log("The score is positive.");
 }
 
-  //------------------------------------------------------------
+// ------------------------------------------------------------
 
-// IF ELSE (conditionis true then IF code run otherwise run else code )
-let num = -3;
+// IF-ELSE Statement (executes IF block if condition is true; otherwise, executes ELSE block)
+let balance = -20;
 
-if (num > 0) {
-    console.log("The number is positive.");
+if (balance > 0) {
+    console.log("The balance is positive.");
 } else {
-    console.log("The number is negative.");
+    console.log("The balance is negative.");
 }
 
-  //------------------------------------------------------------
+// ------------------------------------------------------------
 
-// ELSE-IF (IF conditon is not true then check ELSE-IF then print else)
-let AnOtherNum = 0;
+// ELSE-IF Statement (checks IF condition first; if false, checks ELSE-IF conditions, then executes ELSE if no conditions are true)
+let stock = 0;
 
-if (AnOtherNum > 0) {
-    console.log("The number is positive.");
-} else if (AnOtherNum < 0) {
-    console.log("The number is negative.");
+if (stock > 0) {
+    console.log("The stock is available.");
+} else if (stock < 0) {
+    console.log("The stock is negative.");
 } else {
-    console.log("The number is zero.");
+    console.log("The stock is empty.");
 }
 
-  //------------------------------------------------------------
+// ------------------------------------------------------------
 
-// SWITCH SATATEMENT
-let day = "Wednesday";
+// SWITCH Statement (executes code based on matching case; defaults to other code if no match is found)
+let fruit = "Apple";
 
-switch (day) {
-    case "Monday":
-        console.log("It's the start of the week!");
+switch (fruit) {
+    case "Banana":
+        console.log("Bananas are rich in potassium!");
         break;
-    case "Wednesday":
-        console.log("It's middle  of week!");
+    case "Apple":
+        console.log("An apple a day keeps the doctor away!");
         break;
-    case "Friday":
-        console.log("The weekend is near!");
+    case "Orange":
+        console.log("Oranges are full of Vitamin C!");
         break;
     default:
-        console.log("It's a regular day.");
+        console.log("That's a different fruit.");
 }
 
-  //------------------------------------------------------------
-  
-let cups=14;
-switch (cups) {
-    case 10:
-        console.log("this is not the matching value")
-        break;
-    case 11:
-        console.log("this is not the matching value")
-        break;
-    case 13:
-        console.log("this is not the matching value")
-        break;   
+// ------------------------------------------------------------
 
+let level = 3;
+switch (level) {
+    case 1:
+        console.log("Beginner level.");
+        break;
+    case 2:
+        console.log("Intermediate level.");
+        break;
+    case 3:
+        console.log("Advanced level.");
+        break;
     default:
-        console.log("No matching values found");
-        
+        console.log("Level not recognized.");
         break;
 }
