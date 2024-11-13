@@ -1,37 +1,33 @@
 // Array
 
-// An array is a data structure in JavaScript that holds a collection of elements, which can be of any type, including numbers, strings, objects, or even other arrays. Arrays are zero-indexed, meaning the first element is accessed at index 0
+// An array is a data structure in JavaScript that stores a collection of elements. These elements can be of any type, such as numbers, strings, objects, or even other arrays. Arrays are zero-indexed, meaning the first element is at index 0.
 
-
-// syntax
-let arrayName = [element1, element2, element3, ];
+// Syntax
+let arrayName = [item1, item2, item3];
 
 // Example
 
-let fruits = ["apple", "banana", "cherry"];
-console.log(fruits); 
+let animals = ["lion", "tiger", "elephant"];
+console.log(animals);
 
-// accessing individual element
+// Accessing individual items
 
-console.log(fruits[0]); 
-console.log(fruits[2]); 
+console.log(animals[0]); 
+console.log(animals[2]); 
 
-// modifying elements
+// Updating elements
 
-fruits[1] = "blueberry"; 
-console.log(fruits); 
+animals[1] = "giraffe"; 
+console.log(animals);
 
+// Getting the length of an array
 
+let colors = ["yellow", "purple", "orange"];
+console.log(colors.length);
 
-// finding array lenght
+// Printing each element of an array using a loop
 
-let colors = ["red", "green", "blue"];
-console.log(colors.length); 
-
-// print element of Array using Loop
-
-
-let fruits = ["apple", "banana", "cherry", "date"];
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+let cities = ["Paris", "London", "Tokyo", "Sydney"];
+for (let i = 0; i < cities.length; i++) {
+    console.log(cities[i]);
 }
