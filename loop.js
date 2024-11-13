@@ -1,96 +1,92 @@
-// For Loop
+// Basic For Loop
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 3; i++) {
     console.log(i);
 }
 
   //------------------------------------------------------------
 
-// for arrays
+// Looping through a list of colors
 
-let fruits = ["apple", "banana", "cherry"];
+let colors = ["red", "green", "blue"];
 
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+for (let i = 0; i < colors.length; i++) {
+    console.log(colors[i]);
 }
 
   //------------------------------------------------------------
 
-// Reverse a string
+// Countdown with even numbers
 
-console.log(" Here is the reverse counting ");
-for (let i = 10; i >= 0; i -= 2) {
-   
+console.log("Countdown with even numbers:");
+for (let i = 12; i >= 0; i -= 2) {
     console.log(i);
 }
 
   //------------------------------------------------------------
 
-// Break and Continue
+// Using Break and Continue
 
-console.log("Here we use BREAK and CONTINUE ");
+console.log("Using BREAK and CONTINUE with numbers:");
 
-for (let i = 1; i <= 10; i++) {
-    if (i === 5) {
-        console.log("Here is number 5")
+for (let i = 1; i <= 7; i++) {
+    if (i === 3) {
+        console.log("We reached 3");
         continue;
     }
-    if (i === 8) {
-        console.log("Yes we find 8");
-        
+    if (i === 6) {
+        console.log("Found number 6");
         break; 
     }
     console.log(i);
 }
 
-
   //------------------------------------------------------------
 
-//  For Loop In
-// usually used for objects
+// Iterating Through an Animal Object (For-in loop)
 
-let person = {
-    name: "Sam",
-    age: 30,
-    city: "Lahore"
+let animal = {
+    species: "Lion",
+    age: 5,
+    habitat: "Savannah"
 };
 
-for (let key in person) {
-    console.log(key + ": " + person[key]);
+for (let key in animal) {
+    console.log(key + ": " + animal[key]);
 }
 
   //------------------------------------------------------------
 
-// while loop
+// Using a While Loop for counting
 
 let i = 1;
 
-while (i <= 5) {
+while (i <= 4) {
     console.log(i);
     i++;  
 }
 
   //------------------------------------------------------------
 
-// array
-let fruit = ["apple", "banana", "cherry"];
+// Iterating Through an Array of Vehicles with While
+
+let vehicles = ["car", "bike", "bus"];
 let j = 0;
 
-while (j < fruit.length) {
-    console.log(fruit[j]);
+while (j < vehicles.length) {
+    console.log(vehicles[j]);
     j++;
 }
 
-
   //------------------------------------------------------------
 
-// Break and Continue
-let x = 3;
+// Break and Continue with While (numbers)
 
-while (x < 10) {
-    if (x === 7) {
-      
-        break;  
+let x = 2;
+
+while (x < 8) {
+    if (x === 5) {
+        break;  // exit the loop when x reaches 5
     }
 
     console.log(x);
@@ -99,32 +95,31 @@ while (x < 10) {
 
   //------------------------------------------------------------
 
-// Do While Loop
+// Do-While Loop for counting odd numbers
 
 let k = 1;
 
 do {
     console.log(k);
-    k++;  
-} while (k >= 5);
-
+    k += 2;  
+} while (k <= 5); // loop runs as long as k is less than or equal to 5
 
   //------------------------------------------------------------
-  
-// Break and Continue
+
+// Break and Continue with Do-While (counting)
 
 let y = 0;
 
 do {
-    if (y === 3) {
+    if (y === 2) {
         y++;
-        continue;  // skip the rest of the loop for i == 3
+        continue;  // skip the rest of the loop when y is 2
     }
 
-    if (y === 5) {
-        break;  // exit the loop when i == 5
+    if (y === 4) {
+        break;  // stop the loop when y reaches 4
     }
 
     console.log(y);
-    i++;
-} while (i < 10);
+    y++;
+} while (y < 6); 
