@@ -16,17 +16,17 @@
 
 // Data Type Conversion Examples
 
-let score = 33;
-console.log(typeof score); // "number"
+let userScore = 45;
+console.log(typeof userScore); // "number"
 
-let newScore = "33";
-console.log(typeof newScore); // "string"
+let stringScore = "45";
+console.log(typeof stringScore); // "string"
 
-// Convert 'newScore' from string to number
-let valueInNumber = Number(newScore);
-console.log(typeof valueInNumber); // now it's converted to "number"
+// Convert 'stringScore' from string to number
+let numericValue = Number(stringScore);
+console.log(typeof numericValue); // now it's converted to "number"
 
-// When converting a string containing non-numeric characters (like "333abc") to a number,
+// When converting a string containing non-numeric characters (like "45abc") to a number,
 // it will return NaN (Not a Number)
 
 //------------------------------------------------------------
@@ -35,28 +35,28 @@ console.log(typeof valueInNumber); // now it's converted to "number"
 // - true converts to 1
 // - false converts to 0
 
-let isLoggedIn = 1;
-let booleanIsLoggedIn = Boolean(isLoggedIn);
-console.log(typeof booleanIsLoggedIn); // "boolean"
-console.log(booleanIsLoggedIn); // true
+let isActive = 0;
+let booleanIsActive = Boolean(isActive);
+console.log(typeof booleanIsActive); // "boolean"
+console.log(booleanIsActive); // false
 
 //------------------------------------------------------------
 
 // Converting numbers to strings
 
-let someNumber = 55;
-let stringNumber = String(someNumber);
-console.log(typeof stringNumber); // "string"
-console.log(stringNumber); // "55" as a string
+let integerNumber = 99;
+let stringifiedNumber = String(integerNumber);
+console.log(typeof stringifiedNumber); // "string"
+console.log(stringifiedNumber); // "99" as a string
 
 //------------------------------------------------------------
 
 // Example to show variable hoisting with 'let'
 
-console.log(anotherNumber); // This will throw an error as 'let' variables are not hoisted
-let anotherNumber = 500;
-console.log(anotherNumber); // Outputs: 500
-console.log(typeof anotherNumber); // "number"
+console.log(hoistedNumber); // This will throw an error as 'let' variables are not hoisted
+let hoistedNumber = 100;
+console.log(hoistedNumber); // Outputs: 100
+console.log(typeof hoistedNumber); // "number"
 
-let stringAnotherNumber = String(anotherNumber);
-console.log(typeof stringAnotherNumber); // "string"
+let stringHoistedNumber = String(hoistedNumber);
+console.log(typeof stringHoistedNumber); // "string"
