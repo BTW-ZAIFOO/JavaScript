@@ -1,218 +1,196 @@
-
-function wel() {
-    console.log("Hello!");
+// All About Functions
+// Function to greet everyone
+function greetEveryone() {
+    console.log("Greetings!");
 }
-// call the function
-wel();
+// Call the function
+greetEveryone();
 
-
-function greet(name) {
-    console.log("Hello, " + name + "!");
+// Function to say hi to someone
+function sayHi(person) {
+    console.log("Hi, " + person + "!");
 }
 
-greet("Ali");
-greet("sam");
+sayHi("Ali");
+sayHi("Fatima");
 
 //------------------------------------------------------------
 
-
-// Function Declaration And Function Expression
-
-// Function Declaration 
-
-//write the word function, give it a name, and write the (code) inside curly braces { }.
-
-
-function greet() {
-    console.log("Hello!");
-}
-// call the function
-greet();
-
-//------------------------------------------------------------
-
-// Function Expression 
-// Instead of giving the function a name directly, you store it inside a variable. This function can be anonymous (no name) or named, but most often it’s anonymous.
-
-const greet = function () {
-    console.log("Hello!");
-};
-
-//greet is now a variable that stores the function. Since it's stored in a variable, it acts like a regular variable, so you can only use it after it’s defined in the code.
-greet();
-
-
-//------------------------------------------------------------
-//Return and Parameter 
-
-
-function sum(math,eng,sc){
-let total=(math+eng+sc)/300*100;
-return total
-}
-let marks= sum(90,80,85)
-console.log(marks);
-
-
-
-
-//------------------------------------------------------------
-
-
-// Example
+// Function Declarations vs. Function Expressions
 
 // Function Declaration
-function main() {
-    helper1();
-    helper2();
-    console.log("Main function running!");
+// Declare a function using 'function', followed by the name and code inside curly braces.
+function sayHi() {
+    console.log("Hi!");
 }
-
-// Function Expressions 
-const helper1 = function () {
-    console.log("Helper 1 function running!");
-};
-
-const helper2 = function () {
-    console.log("Helper 2 function running!");
-};
-
-main();
+// Call the function
+sayHi();
 
 //------------------------------------------------------------
 
-// All are function declarations
-function main() {
-    helper3();
-    helper4();
-    console.log("Main function running!");
-}
-
-function helper3() {
-    console.log("Helper 3 function running!");
-}
-
-function helper4() {
-    console.log("Helper 4 function running!");
-}
-
-main(); // Works fine
+// Function Expression
+// A function is assigned to a variable, and can be anonymous or named.
+const sayHi = function () {
+    console.log("Hi there!");
+};
+// The function is stored in a variable and can only be used after declaration.
+sayHi();
 
 //------------------------------------------------------------
 
-// Function with object
+// Function with Arguments and Return Value
+function computeAverage(math, literature, history) {
+    let result = (math + literature + history) / 3;
+    return result;
+}
+let average = computeAverage(85, 75, 90);
+console.log(average);
+
+//------------------------------------------------------------
+
+// Example with Function Declarations and Expressions
+function initiateProcess() {
+    performTaskA();
+    performTaskB();
+    console.log("Main task in progress!");
+}
+
+// Function expressions for subtasks
+const performTaskA = function () {
+    console.log("Task A is in progress!");
+};
+
+const performTaskB = function () {
+    console.log("Task B is in progress!");
+};
+
+initiateProcess();
+
+//------------------------------------------------------------
+
+// All functions are declared
+function initiateMainProcess() {
+    executeTaskC();
+    executeTaskD();
+    console.log("Main process is in progress!");
+}
+
+function executeTaskC() {
+    console.log("Task C is running!");
+}
+
+function executeTaskD() {
+    console.log("Task D is running!");
+}
+
+initiateMainProcess(); // Everything works fine
+
+//------------------------------------------------------------
+
+// Function with an object
 
 // Creating an object
-const person = {
-    name: "Ali",
-    age: 25
+const individual = {
+    name: "Ayesha",
+    age: 30
 };
 
-function updatePerson(person) {
-    person.age += 1;  // Increase age by 1
-    person.name = person.name.toUpperCase();  // Convert name to uppercase
-    return person;
+// Function that modifies an object
+function modifyIndividual(individual) {
+    individual.age += 2;  // Increase age by 2
+    individual.name = individual.name.toLowerCase();  // Convert name to lowercase
+    return individual;
 }
 
 // Passing the object to the function
-const updatedPerson = updatePerson(person);
+const modifiedIndividual = modifyIndividual(individual);
 
-console.log(updatedPerson);
+console.log(modifiedIndividual);
 
 //------------------------------------------------------------
 
-// Function with array
+// Function working with an array
 
-// Function that filters an array and returns a new one
-function filterEvenNumbers(numbers) {
-    return numbers.filter(number => number % 2 === 0);
+// Function that filters out odd numbers
+function getOddNumbers(numbers) {
+    return numbers.filter(number => number % 2 !== 0);
 }
 
-const allNumbers = [1, 2, 3, 4, 5, 6];
-const evenNumbers = filterEvenNumbers(allNumbers);
+const allNumbersList = [1, 2, 3, 4, 5, 6];
+const oddNumbers = getOddNumbers(allNumbersList);
 
-console.log(evenNumbers);
-// Output: [2, 4, 6]
+console.log(oddNumbers);
+// Output: [1, 3, 5]
 
 //------------------------------------------------------------
 
-// Function to add an item to an array
-function addItem(arr, item) {
-    arr.push(item);
-    return arr;
+// Function to add a new item to an array
+function appendItemToList(list, item) {
+    list.push(item);
+    return list;
 }
 
-const numbers = [1, 2, 3];
-const updatedNumbers = addItem(numbers, 4);
+const numberList = [1, 2, 3];
+const updatedList = appendItemToList(numberList, 6);
 
-console.log(updatedNumbers);
-// Output: [1, 2, 3, 4]
+console.log(updatedList);
+// Output: [1, 2, 3, 6]
 
 
 //------------------------------------------------------------
 
-// Arrow Function
+// Arrow Functions
 
-// Syntax
-const functionName = (parameter1, parameter2) => {
-    // function body
+// Basic arrow function syntax
+const exampleFunction = (arg1, arg2) => {
+    // body of function
 };
 
-// Arrow function with parameters
-const sum = (a, b) => a + b;
+// Arrow function to multiply two numbers
+const multiplyNumbers = (x, y) => x * y;
 
-// Arrow function with a single parameter (no parentheses needed)
-const square = x => x * x;
+// Arrow function to cube a number
+const cubeNumber = z => z ** 3;
 
 // Arrow function with no parameters
-const greet = () => "Hello, world!";
-
+const helloUniverse = () => "Greetings, universe!";
 
 //---------------------------------------------------------
+// Examples with arrow functions
 
-// Examples
-
-const add = (a, b) => {
-    return a + b;
-  };
+const addTwoNumbers = (x, y) => {
+    return x + y;
+};
   
-  console.log(add(2, 3));  
-
-  
-//-------------------------------------------------
-
-
-  const sq = x => {
-    return x * x;
-  };
-  
-  console.log(sq(4));  
-  
-  
-  //-------------------------------------------------
-
-  const multiply = (a, b) => a * b;
-
-console.log(multiply(3, 5)); 
-
+console.log(addTwoNumbers(5, 10));
 
 //-------------------------------------------------
 
-const greet = () => {
-    console.log("Hello, world!");
-  };
+const cube = z => {
+    return z ** 3;
+};
   
-  greet();  
-
-  
+console.log(cube(3));  
 
 //-------------------------------------------------
 
-const greet = (name = "Guest") => {
-    console.log(`Hello, ${name}!`);
-  };
-  
-  greet("Ali");  
-  greet();         
+const divideNumbers = (x, y) => x / y;
 
+console.log(divideNumbers(15, 3)); 
+
+//-------------------------------------------------
+
+const helloUniverse = () => {
+    console.log("Greetings, universe!");
+};
   
+helloUniverse();  
+
+//-------------------------------------------------
+
+const greetUser = (user = "Visitor") => {
+    console.log(`Hello, ${user}!`);
+};
+  
+greetUser("Omar");  
+greetUser();         
