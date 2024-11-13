@@ -2,65 +2,65 @@
 // There are three ways to declare variables: var, let, and const.
 
 // 1. var
-var name = "Huzaifa";
-console.log(name);
+var pet = "Dog";
+console.log(pet);
 
 // We can reassign values to variables declared with var.
-name = "Sam";
-console.log(name);
+pet = "Cat";
+console.log(pet);
 
 // 2. let
-let age = 15;
-console.log(age);
+let temperature = 30;
+console.log(temperature);
 
 // Values can also be reassigned to variables declared with let.
-age = 20;
-console.log(age);
+temperature = 25;
+console.log(temperature);
 
 // 3. const
-const userId = "Huzaifa123";
-console.log(userId);
+const userEmail = "user@example.com";
+console.log(userEmail);
 
 // Reassigning values to const variables is not allowed.
 // The following line would cause an error:
-// userId = "sam123"; 
-// console.log(userId); // This would throw an error.
+// userEmail = "newuser@example.com"; 
+// console.log(userEmail); // This would throw an error.
 
 // EXAMPLES
 
-var country = "INDIA";
-let population = 5780000000;
-const city = "BEGALURU";
+var countryName = "Japan";
+let areaPopulation = 126000000;
+const capitalCity = "Tokyo";
 
-console.log(country);     // Output: "INDIA"
-console.log(population);  // Output: 5780000000
-console.log(city);        // Output: "BENGALURU"
+console.log(countryName);     // Output: "Japan"
+console.log(areaPopulation);  // Output: 126000000
+console.log(capitalCity);     // Output: "Tokyo"
 
 // Variables declared with let can be reassigned.
-population = 81813000000;
-console.log(population);  // Output: 81813000000
+areaPopulation = 130000000;
+console.log(areaPopulation);  // Output: 130000000
 
 // EXAMPLES
 
-let score = 100;
-console.log(score);       // Output: 100
+let playerScore = 500;
+console.log(playerScore);     // Output: 500
 
-score = 150;
-console.log(score);       // Output: 150
+playerScore = 700;
+console.log(playerScore);     // Output: 700
 
-const maxScore = 200;
-console.log(maxScore);    // Output: 200
+const highestScore = 1000;
+console.log(highestScore);    // Output: 1000
 
 // Reassigning values to const variables causes an error.
-// maxScore = 250; // Error
+// highestScore = 1200; // Error
 
 // EXAMPLE: Hoisting behavior
 
-console.log(a); // Output: undefined (var is hoisted but uninitialized)
-var a = 5;
+console.log(x); // Output: undefined (var is hoisted but uninitialized)
+var x = 20;
 
-console.log(b); // Error! Cannot access 'b' before initialization
-let b = 10;
+console.log(y); // Error! Cannot access 'y' before initialization
+let y = 40;
 
-console.log(c); // Error! Cannot access 'c' before initialization
-const c = 15;
+console.log(z); // Error! Cannot access 'z' before initialization
+const z = 60;
