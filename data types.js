@@ -1,59 +1,62 @@
-/* Data-Types */
+/* Data Types in JavaScript */
 
-// numbers => 2 power raise to 53
-// bigInt
-// string => ""
-// boolean => true/flase
-// null =>standalone value
-// undefined
-// symbol => unique
+// Basic Data Types
+// - number: holds numeric values up to 2^53 - 1
+// - bigInt: for larger integers
+// - string: text values enclosed in quotes ("")
+// - boolean: true or false
+// - null: represents an intentional absence of value
+// - undefined: a variable declared but not assigned
+// - symbol: unique values, useful for creating unique keys
 
-// object
+// Composite Type
+// - object: collections of key-value pairs, useful for storing complex data
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-//Data -Types conversion
+// Data Type Conversion Examples
 
 let score = 33;
+console.log(typeof score); // "number"
 
-console.log(typeof score); //number
+let newScore = "33";
+console.log(typeof newScore); // "string"
 
-let NewScore = "33";
+// Convert 'newScore' from string to number
+let valueInNumber = Number(newScore);
+console.log(typeof valueInNumber); // now it's converted to "number"
 
-console.log(typeof NewScore); // string
+// When converting a string containing non-numeric characters (like "333abc") to a number,
+// it will return NaN (Not a Number)
 
-// // convert 'typeof' from string into number
+//------------------------------------------------------------
 
-let ValueInNumber = Number(NewScore);
-console.log(typeof ValueInNumber); // now it convert into number
+// Converting boolean values to numbers: 
+// - true converts to 1
+// - false converts to 0
 
-// if we have mixture of number and string like "333abc" and try to convert into number it shows type
-// into number but when we print is shows value into NaN means Not a Number
+let isLoggedIn = 1;
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+console.log(typeof booleanIsLoggedIn); // "boolean"
+console.log(booleanIsLoggedIn); // true
 
+//------------------------------------------------------------
 
-  //------------------------------------------------------------
-
-// if we have boolen in our NewScore and convert into number it shows 1 for true and 0 for false
-
-// conersion from number to boolean
-
-let IsLoggedIn = 1;
-let booleanIsLoggedIn = Boolean(IsLoggedIn);
-console.log(typeof IsLoggedIn); // change number into boolean
-console.log(IsLoggedIn); // vlaue is True
-
-  //------------------------------------------------------------
-  
-//  // conersion from number to string
+// Converting numbers to strings
 
 let someNumber = 55;
 let stringNumber = String(someNumber);
-console.log(typeof stringNumber); // chnage into string
-console.log(stringNumber); // value is 55 which is in string
+console.log(typeof stringNumber); // "string"
+console.log(stringNumber); // "55" as a string
 
-console.log(anotherNumber);
+//------------------------------------------------------------
+
+// Example to show variable hoisting with 'let'
+
+console.log(anotherNumber); // This will throw an error as 'let' variables are not hoisted
 let anotherNumber = 500;
-console.log(anotherNumber);
-console.log(typeof anotherNumber);
-let strringNumber = String(anotherNumber);
-console.log(typeof strringNumber);
+console.log(anotherNumber); // Outputs: 500
+console.log(typeof anotherNumber); // "number"
+
+let stringAnotherNumber = String(anotherNumber);
+console.log(typeof stringAnotherNumber); // "string"
