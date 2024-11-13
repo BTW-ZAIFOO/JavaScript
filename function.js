@@ -107,7 +107,7 @@ const modifiedIndividual = modifyIndividual(individual);
 
 console.log(modifiedIndividual);
 
-//------------------------------------------------------------
+//-----------------------------------------------------------
 
 // Function working with an array
 
