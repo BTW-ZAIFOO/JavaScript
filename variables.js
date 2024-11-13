@@ -1,68 +1,62 @@
-// variables are used to store data values..
-// var
-// let
-// const
+// Variables are used to store data values in JavaScript.
+// There are three ways to declare variables: var, let, and const.
 
-// 1- var
-
-var name= "Aqib";
+// 1. var
+var name = "Huzaifa";
 console.log(name);
 
-// we can reassign the values
-
-name="sam";
+// We can reassign values to variables declared with var.
+name = "Sam";
 console.log(name);
 
-// 2- let
-
-let age=15;
-console.log(age);
-// we can reassign the values
-age=20;
+// 2. let
+let age = 15;
 console.log(age);
 
+// Values can also be reassigned to variables declared with let.
+age = 20;
+console.log(age);
 
+// 3. const
+const userId = "aqib123";
+console.log(userId);
 
-// 3- const
+// Reassigning values to const variables is not allowed.
+// The following line would cause an error:
+// userId = "sam123"; 
+// console.log(userId); // This would throw an error.
 
-const UserId= "aqib123"
-console.log(UserId);
+// EXAMPLES
 
-// we cannot reassign values in const
+var country = "INDIA";
+let population = 5780000000;
+const city = "BEGALURU";
 
-// UserId= "sam123";
-// console.log(UserId); //give error
+console.log(country);     // Output: "INDIA"
+console.log(population);  // Output: 5780000000
+console.log(city);        // Output: "BENGALURU"
 
+// Variables declared with let can be reassigned.
+population = 81813000000;
+console.log(population);  // Output: 81813000000
 
-//  EXAMPLES
-
-var country = "PAKISTAN";
-let population = 330000000;
-const city = "ISLAMABAD";
-
-console.log(country);     
-console.log(population);  
-console.log(city);   
-
-population = 881000000;   
-console.log(population);  
-
-//  EXAMPLES
+// EXAMPLES
 
 let score = 100;
-console.log(score); 
+console.log(score);       // Output: 100
 
-score = 150; 
-console.log(score); 
+score = 150;
+console.log(score);       // Output: 150
 
 const maxScore = 200;
-console.log(maxScore); 
+console.log(maxScore);    // Output: 200
 
+// Reassigning values to const variables causes an error.
 // maxScore = 250; // Error
 
-// EXAMPLE
+// EXAMPLE: Hoisting behavior
 
-console.log(a); // Output: undefined 
+console.log(a); // Output: undefined (var is hoisted but uninitialized)
 var a = 5;
 
 console.log(b); // Error! Cannot access 'b' before initialization
