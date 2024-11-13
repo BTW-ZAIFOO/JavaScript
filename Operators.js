@@ -1,48 +1,79 @@
-// Scopes Overview
+// 1. Arithmetic Operators
+let num1 = 12;
+let num2 = 4;
+let num3 = 7;
 
-//-------------------------------------------------------
+// Addition
+console.log(num1 + num2); // Output: 16
+console.log(num2 + num3); // Output: 11
 
-// Global Scope
-// A global scope refers to variables or functions that are declared outside of any function or block. These can be accessed from any part of the code.
+// Subtraction
+console.log(num1 - num2); // Output: 8
+console.log(num3 - num1); // Output: -5
 
-let globalVar = "I am global!";
+// Multiplication
+console.log(num1 * num2); // Output: 48
+console.log(num2 * num3); // Output: 28
 
-function showGlobalVar() {
-  console.log(globalVar);
-}
+// Division
+console.log(num1 / num2); // Output: 3
+console.log(num1 / num3); // Output: 1.7142857142857142
 
-showGlobalVar();
-console.log(globalVar);
+// Modulus (remainder)
+console.log(num1 % num2); // Output: 0
+console.log(num2 % num3); // Output: 4
 
-// globalVar is declared in the global scope, so it can be accessed both inside and outside the function showGlobalVar().
+// Exponentiation (raising to power)
+console.log(num1 ** num2); // Output: 20736 (12^4)
+console.log(num2 ** num3); // Output: 16384 (4^7)
 
+// 2. Comparison Operators
+let x = 8;
+let y = 15;
+let z = 8;
 
-//-------------------------------------------------------
+// Equal to
+console.log(x == y); // Output: false
+console.log(x == z); // Output: true
 
-// Function Scope (Local Scope)
-// Variables declared within a function are in the local scope (also known as function scope). These variables are accessible only within the function where they’re defined.
+// Not equal to
+console.log(x != y); // Output: true
+console.log(x != z); // Output: false
 
-function myFunction() {
-  let localVar = "I am local!";
-  console.log(localVar);
-}
+// Strict equal to (checks value and type)
+console.log(x === y); // Output: false
+console.log(x === z); // Output: true
 
-myFunction();
-console.log(localVar); // Error: localVar is not defined
+// Greater than
+console.log(x > y); // Output: false
+console.log(y > x); // Output: true
 
-// localVar is only accessible within the function myFunction(). Attempting to access localVar outside the function results in an error.
+// Less than
+console.log(x < y); // Output: true
+console.log(y < x); // Output: false
 
+// Greater than or equal to
+console.log(x >= y); // Output: false
+console.log(x >= z); // Output: true
 
-//-------------------------------------------------------
+// Less than or equal to
+console.log(x <= y); // Output: true
+console.log(x <= z); // Output: true
 
-// Block Scope
-// With ES6 (ECMAScript 2015), the keywords let and const were introduced to create block-scoped variables. A block is a section of code within curly braces { }, such as those used in loops or conditionals.
+// 3. Logical Operators
+let isWeekend = true;
+let hasPlans = false;
+let isSunny = true;
 
-if (true) {
-  let blockVar = "I am block-scoped!";
-  console.log(blockVar);
-}
+// AND (&&)
+console.log(isWeekend && hasPlans); // Output: false
+console.log(isWeekend && isSunny); // Output: true
 
-console.log(blockVar); // Error: blockVar is not defined
+// OR (||)
+console.log(isWeekend || hasPlans); // Output: true
+console.log(hasPlans || isSunny); // Output: true
 
-// blockVar is only accessible within the if block. Trying to access it outside results in an error.
+// NOT (!)
+console.log(!isWeekend); // Output: false
+console.log(!hasPlans);  // Output: true
+
