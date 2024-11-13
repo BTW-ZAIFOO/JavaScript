@@ -1,46 +1,50 @@
-// // STRINGS
+// STRINGS
 
-const name = "AQiB";
-const repoCount = 5;
+const developerName = "Zara";
+const projectCount = 8;
 
-console.log(name + repoCount + " Value");
+// Concatenation of string and number
+console.log(developerName + projectCount + " Projects");
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+// Template literal for string interpolation
+console.log(`Hello, I'm ${developerName} and I've worked on ${projectCount} projects.`);
 
-const gameName = new String("aqib-com");
-console.log(gameName[0]);
-console.log(gameName.__proto__);
+// Creating a string object
+const websiteName = new String("zara-site");
+console.log(websiteName[0]); // Accessing the first character of the string
+console.log(websiteName.__proto__); // Inspecting the prototype of the string object
 
-console.log(gameName.length);
-console.log(gameName.toUpperCase());
-console.log(gameName.charAt(2));
-console.log(gameName.indexOf("t"));
+// String length
+console.log(websiteName.length);
 
-// // divide strig depends on number of letters
+// Converting string to uppercase
+console.log(websiteName.toUpperCase());
 
-const newString = gameName.substring(0, 4);
-console.log(newString);
+// Accessing a specific character in the string
+console.log(websiteName.charAt(3));
 
-// // in slice we can give negative values
+// Finding the index of a substring
+console.log(websiteName.indexOf("s"));
 
-const anotherString = gameName.slice(-8, 4);
-console.log(anotherString);
+// Extracting a substring from the string
+const subString = websiteName.substring(0, 3);
+console.log(subString);
 
-// // trim remove extra spaces
+// Using slice with negative indices
+const anotherSlice = websiteName.slice(-6, 3);
+console.log(anotherSlice);
 
-const newStringOne = "   aqib    ";
-console.log(newStringOne);
-console.log(newStringOne.trim());
+// Removing extra spaces from a string
+const spaceyString = "   zara   ";
+console.log(spaceyString);
+console.log(spaceyString.trim()); // Trim spaces
 
-// // replace
+// Replacing a part of the string
+const webUrl = "https://mysite.com/my%20website";
+console.log(webUrl.replace("%20", "_")); // Replacing '%20' with '_'
 
-const url = "https://myweb.com/my%20web";
+// Checking if a string contains a certain substring
+console.log(webUrl.includes("admin")); // Returns false, 'admin' is not in the URL
 
-console.log(url.replace("%20", "-"));
-
-//check  datatype
-console.log(url.includes("sundar"));
-
-// split gamename where is - occur
-
-console.log(gameName.split("-"));
+// Splitting the string where the '-' occurs
+console.log(websiteName.split("-")); // Splits the string at the hyphen
