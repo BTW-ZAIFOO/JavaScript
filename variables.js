@@ -18,7 +18,7 @@ age = 20;
 console.log(age);
 
 // 3. const
-const userId = "aqib123";
+const userId = "Huzaifa123";
 console.log(userId);
 
 // Reassigning values to const variables is not allowed.
