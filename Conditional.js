@@ -1,72 +1,114 @@
 // IF Statement (executes code if the condition is true)
-let temperature = 15;
-if (temperature <= 15) {
-    console.log("It's a cold day.");
+let speed = 80;
+if (speed <= 60) {
+    console.log("The car is going at a safe speed.");
 }
 
-let score = 8;
+let fuelLevel = 50;
 
-if (score > 0) {
-    console.log("The score is positive.");
+if (fuelLevel > 0) {
+    console.log("The car has fuel.");
 }
 
 // ------------------------------------------------------------
 
 // IF-ELSE Statement (executes IF block if condition is true; otherwise, executes ELSE block)
-let balance = -20;
+let tirePressure = 25;
 
-if (balance > 0) {
-    console.log("The balance is positive.");
+if (tirePressure > 30) {
+    console.log("The tire pressure is high.");
 } else {
-    console.log("The balance is negative.");
+    console.log("The tire pressure is low.");
 }
 
 // ------------------------------------------------------------
 
 // ELSE-IF Statement (checks IF condition first; if false, checks ELSE-IF conditions, then executes ELSE if no conditions are true)
-let stock = 0;
+let engineTemperature = 90;
 
-if (stock > 0) {
-    console.log("The stock is available.");
-} else if (stock < 0) {
-    console.log("The stock is negative.");
+if (engineTemperature > 100) {
+    console.log("The engine is overheating.");
+} else if (engineTemperature < 50) {
+    console.log("The engine temperature is low.");
 } else {
-    console.log("The stock is empty.");
+    console.log("The engine temperature is normal.");
 }
 
 // ------------------------------------------------------------
 
 // SWITCH Statement (executes code based on matching case; defaults to other code if no match is found)
-let fruit = "Apple";
+let carBrand = "Toyota";
 
-switch (fruit) {
-    case "Banana":
-        console.log("Bananas are rich in potassium!");
+switch (carBrand) {
+    case "Honda":
+        console.log("Honda cars are reliable!");
         break;
-    case "Apple":
-        console.log("An apple a day keeps the doctor away!");
+    case "Toyota":
+        console.log("Toyota cars are popular for durability!");
         break;
-    case "Orange":
-        console.log("Oranges are full of Vitamin C!");
+    case "BMW":
+        console.log("BMW cars are known for luxury!");
         break;
     default:
-        console.log("That's a different fruit.");
+        console.log("That's a different car brand.");
 }
 
 // ------------------------------------------------------------
 
-let level = 3;
-switch (level) {
+let gearLevel = 2;
+switch (gearLevel) {
     case 1:
-        console.log("Beginner level.");
+        console.log("Car is in first gear.");
         break;
     case 2:
-        console.log("Intermediate level.");
+        console.log("Car is in second gear.");
         break;
     case 3:
-        console.log("Advanced level.");
+        console.log("Car is in third gear.");
         break;
     default:
-        console.log("Level not recognized.");
+        console.log("Unknown gear level.");
         break;
+}
+
+
+//--------------------------------------------------------->
+
+// Falsy Values
+
+// The following are falsy values in JavaScript:
+// false, 0 (and -0), "" (empty string), null, undefined, NaN (Not-a-Number)
+
+// Truthy Values
+
+// Any value that isn’t falsy is considered truthy.
+
+// Example
+
+let carModel = "Camry";
+
+if (carModel) {
+  console.log("The car model is truthy, meaning it exists."); 
+}
+
+// More Examples
+
+if ("Sedan") {
+    console.log("This car type is truthy!");  
+}
+
+if (200) {
+    console.log("Any number other than 0 is truthy!");  
+}
+
+if ({ make: "Toyota" }) {
+    console.log("An object representing a car is truthy!");  
+}
+
+if (["Corolla", "Camry"]) {
+    console.log("An array of car models is truthy!");  
+}
+
+if (function() { return "Drive"; }) {
+    console.log("Functions are also truthy!"); 
 }
