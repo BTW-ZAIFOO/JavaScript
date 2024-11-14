@@ -1,125 +1,141 @@
-// Basic For Loop
-
-for (let i = 1; i <= 3; i++) {
-    console.log(i);
+// For Loop
+// The `for` loop repeats a block of code a specified number of times.
+for (let i = 1; i <= 5; i++) {
+    console.log("Car " + i);
 }
+// Explanation: This loop runs five times, printing "Car 1" through "Car 5" in the console.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Looping through a list of colors
-
-let colors = ["red", "green", "blue"];
-
-for (let i = 0; i < colors.length; i++) {
-    console.log(colors[i]);
+// For Loop with Arrays
+// The `for` loop is used to iterate over each element in an array using the index.
+let cars = ["Toyota", "Honda", "BMW"];
+for (let i = 0; i < cars.length; i++) {
+    console.log(cars[i]);
 }
+// Explanation: This loop iterates through each car in the `cars` array and prints each car brand.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Countdown with even numbers
-
-console.log("Countdown with even numbers:");
-for (let i = 12; i >= 0; i -= 2) {
-    console.log(i);
+// Reverse Countdown
+// This `for` loop counts down from a specified number in reverse.
+console.log("Here is the reverse countdown");
+for (let i = 10; i >= 0; i -= 2) {
+    console.log("Countdown: " + i);
 }
+// Explanation: This loop starts from 10, decrements by 2 each time, and prints the countdown.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Using Break and Continue
-
-console.log("Using BREAK and CONTINUE with numbers:");
-
-for (let i = 1; i <= 7; i++) {
-    if (i === 3) {
-        console.log("We reached 3");
+// Break and Continue in For Loop
+// `break` and `continue` control the flow within a loop.
+console.log("Using BREAK and CONTINUE with cars");
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        console.log("Reached car number 5");
         continue;
     }
-    if (i === 6) {
-        console.log("Found number 6");
-        break; 
+    if (i === 8) {
+        console.log("Car number 8 found, stopping search");
+        break;
     }
-    console.log(i);
+    console.log("Searching car number: " + i);
 }
+// Explanation: `continue` skips the rest of the loop when i is 5; `break` exits the loop entirely when i is 8.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Iterating Through an Animal Object (For-in loop)
+// For...of Loop
+// The `for...of` loop iterates over the values in an iterable, like an array or string.
+const favoriteCars = ["Audi", "Mercedes", "Ford"];
+for (const car of favoriteCars) {
+  console.log(car);
+}
+// Explanation: This loop goes through each car in `favoriteCars` and prints the value directly.
 
-let animal = {
-    species: "Lion",
-    age: 5,
-    habitat: "Savannah"
+// For...of Loop with a String
+const modelName = "Tesla";
+for (const char of modelName) {
+  console.log(char);
+}
+// Explanation: It iterates over each character in the string `modelName`, printing each letter.
+
+//------------------------------------------------------------
+
+// For...in Loop
+// The `for...in` loop iterates over the keys of an object.
+let carDetails = {
+    brand: "Tesla",
+    year: 2023,
+    color: "Red"
 };
-
-for (let key in animal) {
-    console.log(key + ": " + animal[key]);
+for (let key in carDetails) {
+    console.log(key + ": " + carDetails[key]);
 }
+// Explanation: This loop iterates over each key in `carDetails`, printing both the key and its associated value.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Using a While Loop for counting
-
+// While Loop
+// The `while` loop executes as long as a specified condition is true.
 let i = 1;
-
-while (i <= 4) {
-    console.log(i);
-    i++;  
+while (i <= 5) {
+    console.log("Car " + i);
+    i++;
 }
+// Explanation: This loop prints "Car 1" through "Car 5" and stops when `i` becomes greater than 5.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Iterating Through an Array of Vehicles with While
-
-let vehicles = ["car", "bike", "bus"];
+// While Loop with Array
+// This `while` loop iterates over an array.
+let carBrands = ["Toyota", "Mazda", "Nissan"];
 let j = 0;
-
-while (j < vehicles.length) {
-    console.log(vehicles[j]);
+while (j < carBrands.length) {
+    console.log(carBrands[j]);
     j++;
 }
+// Explanation: This loop prints each car in the `carBrands` array and stops when `j` reaches the array length.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Break and Continue with While (numbers)
-
-let x = 2;
-
-while (x < 8) {
-    if (x === 5) {
-        break;  // exit the loop when x reaches 5
+// Break in While Loop
+// The `break` keyword exits the loop immediately when a condition is met.
+let x = 3;
+while (x < 10) {
+    if (x === 7) {
+        break;
     }
-
-    console.log(x);
+    console.log("Inspecting car number: " + x);
     x++;
 }
+// Explanation: This loop prints numbers from 3 up to 6. When `x` becomes 7, `break` exits the loop.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Do-While Loop for counting odd numbers
-
+// Do...while Loop
+// The `do...while` loop executes the code block at least once, then continues as long as the specified condition is true.
 let k = 1;
-
 do {
-    console.log(k);
-    k += 2;  
-} while (k <= 5); // loop runs as long as k is less than or equal to 5
+    console.log("Car inspection " + k);
+    k++;
+} while (k <= 5);
+// Explanation: The loop prints "Car inspection" followed by the number `k` from 1 to 5. It runs at least once due to the `do...while` structure.
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 
-// Break and Continue with Do-While (counting)
-
+// Break and Continue in Do...while Loop
+// `break` and `continue` can be used in a `do...while` loop to control the flow.
 let y = 0;
-
 do {
-    if (y === 2) {
+    if (y === 3) {
         y++;
-        continue;  // skip the rest of the loop when y is 2
+        continue; // skip the rest of the loop for y == 3
     }
-
-    if (y === 4) {
-        break;  // stop the loop when y reaches 4
+    if (y === 5) {
+        break; // exit the loop when y == 5
     }
-
-    console.log(y);
+    console.log("Car check: " + y);
     y++;
-} while (y < 6); 
+} while (y < 10);
+// Explanation: `continue` skips the rest of the loop when y is 3, and `break` exits the loop when y is 5. The loop prints "Car check" for other values.
