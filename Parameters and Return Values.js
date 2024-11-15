@@ -1,7 +1,7 @@
 // Parameters and Return Values in JavaScript
 // Functions in JavaScript can take input values, called parameters, and return an output using the return statement.
 
-// EXAMPLE: Parameters
+// Parameters
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
@@ -21,7 +21,7 @@ add(5, 3);
 
           // Output: 8
 
-// EXAMPLE: Return Values
+// Return Values
 // Functions can also return values that can be used elsewhere in the code.
 
 function multiply(x, y) {
@@ -51,7 +51,7 @@ console.log(checkEven(7));
 
         // Output: "Odd"
 
-// EXAMPLE: Default Parameters
+// Default Parameters
 // We can assign default values to parameters in case they are not provided.
 
 function welcome(user = "Guest") {
@@ -67,7 +67,7 @@ console.log(welcome("John"));
 
           // Output: "Welcome, John!"
 
-// EXAMPLE: Using Return Values in Expressions
+// Using Return Values in Expressions
 // Return values can be used directly in expressions or passed as parameters to other functions.
 
 function square(num) {
@@ -79,7 +79,7 @@ console.log(total);
 
         // Output: 25 (16 + 9)
 
-// EXAMPLE: Returning Objects
+// Returning Objects
 // Functions can also return objects.
 
 function createUser(name, age) {
