@@ -494,3 +494,106 @@ switch (country) {
 // Output: //
 
 "The country is in Asia."
+
+//-----------Here are 5-7 solved examples using truthy and falsy values in JavaScript:--------//
+
+//--------Problem 1: Check if a value is truthy-------//
+
+let value = "Hello";
+
+if (value) {
+    console.log("The value is truthy.");
+} else {
+    console.log("The value is falsy.");
+}
+
+// Output: //
+
+"The value is truthy."
+
+//----------Problem 2: Check for falsy values in user input------//
+
+let userInput = "";
+
+if (userInput) {
+    console.log("User input is valid.");
+} else {
+    console.log("User input is empty or invalid.");
+}
+
+// Output://
+
+"User input is empty or invalid."
+
+//----------Problem 3: Default a value using a falsy check------//
+
+let userName = null;
+let defaultName = userName || "Guest";
+
+console.log("Welcome, " + defaultName + "!");
+
+// Output: //
+
+"Welcome, Guest!"
+
+//------Problem 4: Check if a number is valid----//
+
+let num = 0;
+
+if (num) {
+    console.log("The number is valid.");
+} else {
+    console.log("The number is invalid or zero.");
+}
+
+// Output: //
+
+"The number is invalid or zero."
+
+//-------Problem 5: Use a truthy value in a conditional--------//
+
+let hasAccess = true;
+
+if (hasAccess) {
+    console.log("Access granted.");
+} else {
+    console.log("Access denied.");
+}
+
+// Output://
+
+"Access granted."
+
+//---------Problem 6: Handle falsy values in data-------//
+
+let userAge = undefined;
+
+if (userAge) {
+    console.log("The user age is " + userAge + ".");
+} else {
+    console.log("User age is not provided.");
+}
+
+// Output://
+
+"User age is not provided."
+
+//---------Problem 7: Check for truthy and falsy in a list--------//
+
+let items = [0, "Apple", null, undefined, "Banana", false];
+
+for (let item of items) {
+    if (item) {
+        console.log(item + " is truthy.");
+    } else {
+        console.log(item + " is falsy.");
+    }
+}
+
+// Output:
+// "0 is falsy."
+// "Apple is truthy."
+// "null is falsy."
+// "undefined is falsy."
+// "Banana is truthy."
+// "false is falsy."
