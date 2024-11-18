@@ -300,3 +300,197 @@ if (fuelEfficiency > 20) {
 // Output: //
 
 "The vehicle has average fuel efficiency."
+
+//------------Here are 5-7 solved problems using the switch statement:-----//
+
+//---------Problem 1: Determine the day of the week-------//
+
+let dayNumber = 3;
+
+switch (dayNumber) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day number.");
+        break;
+}
+// Output://
+
+"Wednesday"
+
+//----------Problem 2: Identify a fruit by its name----------//
+
+let fruit = "Mango";
+
+switch (fruit) {
+    case "Apple":
+        console.log("Apples are sweet and crunchy.");
+        break;
+    case "Banana":
+        console.log("Bananas are a great source of potassium.");
+        break;
+    case "Mango":
+        console.log("Mangoes are tropical and juicy.");
+        break;
+    default:
+        console.log("Unknown fruit.");
+        break;
+}
+
+// Output://
+
+"Mangoes are tropical and juicy."
+
+//----------Problem 3: Traffic light instructions--------//
+
+let trafficLight = "Red";
+
+switch (trafficLight) {
+    case "Red":
+        console.log("Stop!");
+        break;
+    case "Yellow":
+        console.log("Get ready to move.");
+        break;
+    case "Green":
+        console.log("Go!");
+        break;
+    default:
+        console.log("Invalid traffic light color.");
+        break;
+}
+
+// Output: //
+
+"Stop!"
+
+//----------Problem 4: Identify the season by month number-------//
+
+let month = 4;
+
+switch (month) {
+    case 12:
+    case 1:
+    case 2:
+        console.log("It's winter.");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        console.log("It's spring.");
+        break;
+    case 6:
+    case 7:
+    case 8:
+        console.log("It's summer.");
+        break;
+    case 9:
+    case 10:
+    case 11:
+        console.log("It's autumn.");
+        break;
+    default:
+        console.log("Invalid month.");
+        break;
+}
+
+// Output://
+
+"It's spring."
+
+//----------Problem 5: Determine the grade based on score------//
+
+let score = 85;
+
+switch (true) {
+    case score >= 90:
+        console.log("Grade: A+");
+        break;
+    case score >= 80:
+        console.log("Grade: A");
+        break;
+    case score >= 70:
+        console.log("Grade: B");
+        break;
+    case score >= 60:
+        console.log("Grade: C");
+        break;
+    default:
+        console.log("Grade: F");
+        break;
+}
+
+// Output://
+
+"Grade: A"
+
+//-----------Problem 6: Select a beverage---------//
+
+let beverage = "Tea";
+
+switch (beverage) {
+    case "Coffee":
+        console.log("You selected Coffee.");
+        break;
+    case "Tea":
+        console.log("You selected Tea.");
+        break;
+    case "Juice":
+        console.log("You selected Juice.");
+        break;
+    default:
+        console.log("Unknown beverage.");
+        break;
+}
+
+// Output: //
+
+"You selected Tea."
+
+//-----------Problem 7: Identify the continent based on country------//
+
+let country = "Japan";
+
+switch (country) {
+    case "USA":
+    case "Canada":
+    case "Mexico":
+        console.log("The country is in North America.");
+        break;
+    case "France":
+    case "Germany":
+    case "Italy":
+        console.log("The country is in Europe.");
+        break;
+    case "Japan":
+    case "China":
+    case "India":
+        console.log("The country is in Asia.");
+        break;
+    default:
+        console.log("Unknown continent.");
+        break;
+}
+
+// Output: //
+
+"The country is in Asia."
