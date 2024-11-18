@@ -8,7 +8,7 @@ console.log(fruits)
 
 // Output: //
 
-;["Apple", "Banana", "Orange"]
+["Apple", "Banana", "Orange"]
 
 // Problem 2: Add a number to an empty array//
 
@@ -18,7 +18,7 @@ console.log(numbers)
 
 // Output:
 
-;[5]
+[5]
 
 // Problem 3: Add multiple colors to the colors array//
 
@@ -28,7 +28,7 @@ console.log(colors)
 
 // Output://
 
-;["Red", "Green", "Blue"]
+["Red", "Green", "Blue"]
 
 // Problem 4: Add a new city to the cities array//
 
@@ -38,7 +38,7 @@ console.log(cities)
 
 // Output://
 
-;["London", "New York", "Paris"]
+["London", "New York", "Paris"]
 
 // Problem 5: Add a friend's name to the friends array//
 
@@ -48,7 +48,7 @@ console.log(friends)
 
 // Output://
 
-;["Alice", "Bob"]
+["Alice", "Bob"]
 
 // Problem 6: Add a boolean value to the truthy array//
 
@@ -58,7 +58,7 @@ console.log(truthy)
 
 // Output://
 
-;[true, false, true]
+[true, false, true]
 
 //---2. pop()----//
 
@@ -70,13 +70,13 @@ console.log(fruits)
 
 // Output://
 
-;["Apple", "Banana"]
+["Apple", "Banana"]
 
 console.log(removedFruit)
 
 // Output://
 
-;("Orange")
+("Orange")
 
 // Problem 2: Remove a number from the numbers array//
 
@@ -86,7 +86,7 @@ console.log(numbers)
 
 // Output://
 
-;[1, 2]
+[1, 2]
 
 // Problem 3: Remove the last item from a mixed array//
 
@@ -96,7 +96,7 @@ console.log(mixed)
 
 // Output://
 
-;["Text", 42]
+["Text", 42]
 
 // Problem 4: Keep removing until the array is empty//
 
@@ -108,7 +108,7 @@ console.log(items)
 
 // Output://
 
-;[]
+[]
 
 // Problem 5: Use pop in a loop to reverse an array//
 
@@ -121,7 +121,7 @@ console.log(reversed)
 
 // Output://
 
-;[4, 3, 2, 1]
+[4, 3, 2, 1]
 
 // Problem 6: Remove the last student from the class//
 
@@ -131,7 +131,7 @@ console.log(students)
 
 // Output://
 
-;["John", "Jane"]
+["John", "Jane"]
 
 //---3. unshift()---//
 
@@ -143,7 +143,7 @@ console.log(fruits)
 
 // Output://
 
-;["Apple", "Banana", "Orange"]
+["Apple", "Banana", "Orange"]
 
 // Problem 2: Add a number at the start of the numbers array//
 
@@ -153,7 +153,7 @@ console.log(numbers)
 
 // Output://
 
-;[1, 2, 3]
+[1, 2, 3]
 
 // Problem 3: Add multiple colors at the beginning//
 
@@ -163,7 +163,7 @@ console.log(colors)
 
 // Output://
 
-;["Red", "Green", "Blue"]
+["Red", "Green", "Blue"]
 
 // Problem 4: Add a friend at the start//
 
@@ -173,7 +173,7 @@ console.log(friends)
 
 // Output://
 
-;["Alice", "Bob"]
+["Alice", "Bob"]
 
 // Problem 5: Add a new city at the beginning//
 
@@ -183,7 +183,7 @@ console.log(cities)
 
 // Output://
 
-;["London", "Paris", "New York"]
+["London", "Paris", "New York"]
 
 // Problem 6: Add an item to an empty array//
 
@@ -193,7 +193,7 @@ console.log(emptyArray)
 
 // Output: //
 
-;["First Item"]
+["First Item"]
 
 //---4. shift()---//
 
@@ -205,13 +205,13 @@ console.log(fruits)
 
 // Output://
 
-;["Banana", "Orange"]
+["Banana", "Orange"]
 
 console.log(firstFruit)
 
 // Output://
 
-;("Apple")
+("Apple")
 
 // Problem 2: Remove the first number from the numbers array//
 
@@ -221,7 +221,7 @@ console.log(numbers)
 
 // Output://
 
-;[2, 3]
+[2, 3]
 
 // Problem 3: Remove the first element of a mixed array//
 
@@ -231,7 +231,7 @@ console.log(mixed)
 
 // Output://
 
-;[42, "Text"]
+[42, "Text"]
 
 // Problem 4: Remove until the array is empty//
 
@@ -243,7 +243,7 @@ console.log(items)
 
 // Output://
 
-;[]
+[]
 
 // Problem 5: Remove the first student from the class//
 
@@ -253,7 +253,7 @@ console.log(students)
 
 // Output://
 
-;["Jane", "Doe"]
+["Jane", "Doe"]
 
 // Problem 6: Keep removing elements from a queue//
 
@@ -275,7 +275,7 @@ console.log(fruitString)
 
 // Output://
 
-;("Apple, Banana, Orange")
+("Apple, Banana, Orange")
 
 // Problem 2: Join numbers with a hyphen//
 
@@ -285,7 +285,7 @@ console.log(numberString)
 
 // Output: //
 
-;("1-2-3")
+("1-2-3")
 
 // Problem 3: Join letters without a separator//
 
@@ -295,7 +295,7 @@ console.log(word)
 
 // Output://
 
-;("ABC")
+("ABC")
 
 // Problem 4: Use join to create an HTML list//
 
@@ -305,7 +305,7 @@ console.log(`<ul><li>${htmlList}</li></ul>`)
 
 // Output://
 
-;("<ul><li>Home</li><li>About</li><li>Contact</li></ul>")
+("<ul><li>Home</li><li>About</li><li>Contact</li></ul>")
 
 // Problem 5: Join a list of names with " & "//
 
@@ -315,7 +315,7 @@ console.log(nameString)
 
 // Output: //
 
-;("Alice & Bob & Charlie")
+("Alice & Bob & Charlie")
 
 // Problem 6: Join with emojis as separators//
 
@@ -325,4 +325,4 @@ console.log(emojiString)
 
 // Output://
 
-;("Happy 😊 Excited 😊 Joyful")
+("Happy 😊 Excited 😊 Joyful")
