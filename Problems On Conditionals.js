@@ -177,3 +177,126 @@ if (score >= 50) {
 // Output://
 
 "You have failed the exam."
+
+//----------------Here are 5-7 solved problems using the if-else statement:-----//
+
+//---------Problem 1: Categorize a number as positive, negative, or zero------//
+
+let number = -5;
+
+if (number > 0) {
+    console.log("The number is positive.");
+} else if (number < 0) {
+    console.log("The number is negative.");
+} else {
+    console.log("The number is zero.");
+}
+
+// Output: //
+
+"The number is negative."
+
+//-------------Problem 2: Determine the grade of a student based on marks-------//
+
+let marks = 85;
+
+if (marks >= 90) {
+    console.log("Grade: A+");
+} else if (marks >= 80) {
+    console.log("Grade: A");
+} else if (marks >= 70) {
+    console.log("Grade: B");
+} else if (marks >= 60) {
+    console.log("Grade: C");
+} else {
+    console.log("Grade: F");
+}
+
+// Output://
+
+"Grade: A"
+
+//------------Problem 3: Check the weather based on temperature-------//
+
+let temperature = 25;
+
+if (temperature > 35) {
+    console.log("It's very hot.");
+} else if (temperature >= 25 && temperature <= 35) {
+    console.log("The weather is warm.");
+} else if (temperature >= 15 && temperature < 25) {
+    console.log("The weather is cool.");
+} else {
+    console.log("It's cold outside.");
+}
+
+// Output: //
+
+"The weather is warm."
+
+//-----------Problem 4: Determine the type of triangle based on side lengths------//
+
+let a = 5, b = 5, c = 8;
+
+if (a === b && b === c) {
+    console.log("The triangle is equilateral.");
+} else if (a === b || b === c || a === c) {
+    console.log("The triangle is isosceles.");
+} else {
+    console.log("The triangle is scalene.");
+}
+
+// Output://
+
+"The triangle is isosceles."
+
+//-----------Problem 5: Check the stage of life based on age---------//
+
+let age = 25;
+
+if (age < 13) {
+    console.log("You are a child.");
+} else if (age >= 13 && age < 20) {
+    console.log("You are a teenager.");
+} else if (age >= 20 && age < 60) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a senior citizen.");
+}
+
+// Output://
+
+"You are an adult."
+
+//------------Problem 6: Determine internet speed category-------//
+
+let speed = 50;
+
+if (speed > 100) {
+    console.log("High-speed internet.");
+} else if (speed >= 50 && speed <= 100) {
+    console.log("Moderate-speed internet.");
+} else {
+    console.log("Low-speed internet.");
+}
+
+// Output://
+
+"Moderate-speed internet."
+
+//------------Problem 7: Categorize a vehicle's fuel efficiency--------//
+
+//------// km per liter----//
+let fuelEfficiency = 15; 
+
+if (fuelEfficiency > 20) {
+    console.log("The vehicle is very fuel efficient.");
+} else if (fuelEfficiency >= 10 && fuelEfficiency <= 20) {
+    console.log("The vehicle has average fuel efficiency.");
+} else {
+    console.log("The vehicle is not fuel efficient.");
+}
+
+// Output: //
+
+"The vehicle has average fuel efficiency."
