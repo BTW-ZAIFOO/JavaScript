@@ -109,5 +109,61 @@ let arr = [1, 2, 3, 4];
 [arr[0], , arr[2]] = [arr[2], , arr[0]];
 console.log(arr); // [3, 2, 1, 4]
 
-//-------- These examples showcase how to skip elements while destructuring arrays, ranging from basic skipping to incorporating nested arrays, rest operators, and function parameter use cases. --------//
+//--------These examples showcase how to skip elements while destructuring arrays, ranging from basic skipping to incorporating nested arrays, rest operators, and function parameter use cases. --------//
+
+//----------Solved Problems: Default Values in Array Destructuring------//
+
+//-----------1. Assigning Default Values--------//
+
+const numbers = [5, 10];
+const [first = 1, second = 2, third = 3] = numbers;
+console.log(first); // 5
+console.log(second); // 10
+console.log(third); // 3 (default value)
+
+//-------------2. Using Default Values for Missing Elements--------//
+
+const fruits = ["Apple"];
+const [fruit1 = "Banana", fruit2 = "Cherry"] = fruits;
+console.log(fruit1); // "Apple"
+console.log(fruit2); // "Cherry" (default value)
+
+//-------------3. Default Values with Skipping Elements---------//
+
+const colors = ["Red"];
+const [, secondColor = "Blue", thirdColor = "Green"] = colors;
+console.log(secondColor); // "Blue" (default value)
+console.log(thirdColor); // "Green" (default value)
+
+//----------4. Nested Arrays with Default Values-------//
+
+const nestedArray = [10, [20]];
+const [firstNum = 1, [secondNum = 2, thirdNum = 3]] = nestedArray;
+console.log(firstNum); // 10
+console.log(secondNum); // 20
+console.log(thirdNum); // 3 (default value)
+
+//-------------5. Default Values with Rest Operator------//
+
+const items = ["Pen"];
+const [item1 = "Pencil", ...otherItems] = items;
+console.log(item1); // "Pen"
+console.log(otherItems); // []
+
+//-------------6. Default Values in Function Parameters-----//
+
+function sum([a = 0, b = 0, c = 0]) {
+    return a + b + c;
+}
+const numbers = [4, 5];
+console.log(sum(numbers)); // 9 (4 + 5 + 0)
+
+//-------------7. Combining Default Values and Swapping------//
+
+let x = 3, y;
+[x = 5, y = 7] = [undefined, undefined]; // Assigning default values
+console.log(x); // 5
+console.log(y); // 7
+
+//-------These examples demonstrate different scenarios of applying default values in array destructuring, including nested arrays, skipping elements, and rest operators. --------//
 
