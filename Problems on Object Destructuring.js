@@ -194,3 +194,105 @@ console.log(publisher); // "Unknown Publisher" (default value)
 console.log(year); // 1949 (default value)
 
 //----- These examples demonstrate how default values ensure that destructured variables always have meaningful values even if some properties are missing from the object. -------//
+
+//-------------Solved Problems: Nested Object Destructuring-----------//
+
+//--------1. Destructuring Nested Properties-------//
+
+const car = {
+  model: "Corolla",
+  specs: {
+    engine: "1.8L",
+    fuelType: "Petrol"
+  }
+};
+const { specs: { engine, fuelType } } = car;
+console.log(engine); // "1.8L"
+console.log(fuelType); // "Petrol"
+
+//-------2. Destructuring with Additional Properties-----//
+
+const user = {
+  id: 123,
+  profile: {
+    firstName: "Ali",
+    lastName: "Khan"
+  }
+};
+const { profile: { firstName, lastName }, id } = user;
+console.log(firstName); // "Ali"
+console.log(lastName); // "Khan"
+console.log(id); // 123
+
+//--------3. Providing Default Values------//
+
+const product = {
+  id: 200,
+  specs: {
+    weight: "2kg"
+  }
+};
+const { specs: { weight, color = "black" } } = product;
+console.log(weight); // "2kg"
+console.log(color); // "black" (default value)
+
+//--------4. Nested Object Destructuring with Functions------//
+
+const order = {
+  orderId: 5001,
+  details: {
+    item: "Laptop",
+    quantity: 2
+  }
+};
+function displayOrder({ details: { item, quantity } }) {
+  console.log(`Item: ${item}`);
+  console.log(`Quantity: ${quantity}`);
+}
+displayOrder(order);
+// Output:
+// Item: Laptop
+// Quantity: 2
+
+//-------5. Destructuring Multiple Nested Levels------//
+
+const company = {
+  name: "TechCorp",
+  location: {
+    city: "San Francisco",
+    address: {
+      street: "Market St",
+      zip: 94103
+    }
+  }
+};
+const { location: { address: { street, zip } } } = company;
+console.log(street); // "Market St"
+console.log(zip); // 94103
+
+//-------6. Destructuring Arrays Inside Nested Objects------//
+
+const library = {
+  section: "Fiction",
+  books: {
+    titles: ["1984", "Brave New World", "Fahrenheit 451"]
+  }
+};
+const { books: { titles: [firstBook, secondBook] } } = library;
+console.log(firstBook); // "1984"
+console.log(secondBook); // "Brave New World"
+
+//--------7. Renaming Variables in Nested Objects------//
+
+const student = {
+  id: 101,
+  info: {
+    name: "Hassan",
+    grade: "A"
+  }
+};
+const { info: { name: studentName, grade: studentGrade } } = student;
+console.log(studentName); // "Hassan"
+console.log(studentGrade); // "A"
+
+//----- These examples cover a range of use cases for nested object destructuring, showcasing how to access and manipulate deeply nested properties with ease -----//
