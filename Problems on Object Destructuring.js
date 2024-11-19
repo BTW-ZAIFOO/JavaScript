@@ -131,3 +131,66 @@ console.log(productPrice); // 299.99
 console.log(productStock); // 50
 
 //------ These examples demonstrate how renaming variables during object destructuring can improve code readability and make variables more meaningful. -------//
+
+//-----------Solved Problems: Default Values in Object Destructuring--------//
+
+//-------1. Providing Default Values for Missing Properties------//
+
+const car = { brand: "Toyota" };
+const { brand, model = "Unknown Model" } = car;
+console.log(brand); // "Toyota"
+console.log(model); // "Unknown Model" (default value)
+
+//--------2. Default Values with Multiple Properties--------//
+
+const user = { username: "ali123" };
+const { username, age = 25, country = "Pakistan" } = user;
+console.log(username); // "ali123"
+console.log(age); // 25 (default value)
+console.log(country); // "Pakistan" (default value)
+
+//---------3. Nested Objects with Default Values---------//
+
+const employee = { name: "Ahmed", department: { name: "HR" } };
+const { department: { name: departmentName, location = "Head Office" } } = employee;
+console.log(departmentName); // "HR"
+console.log(location); // "Head Office" (default value)
+
+//-----------4. Default Value in Function Parameters------//
+
+function displayDetails({ name, age = 30 }) {
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+}
+const person = { name: "Sara" };
+displayDetails(person);
+// Output:
+// Name: Sara
+// Age: 30 (default value)
+
+//--------5. Combining Default and Actual Values------//
+
+const product = { id: 101, name: "Laptop" };
+const { id, name, price = 500, stock = "In Stock" } = product;
+console.log(id); // 101
+console.log(name); // "Laptop"
+console.log(price); // 500 (default value)
+console.log(stock); // "In Stock" (default value)
+
+//-------6. Using Default Values with Renamed Variables------//
+
+const gadget = { type: "Smartphone" };
+const { type: gadgetType, brand: gadgetBrand = "Generic" } = gadget;
+console.log(gadgetType); // "Smartphone"
+console.log(gadgetBrand); // "Generic" (default value)
+
+//---------7. Complex Objects with Defaults--------//
+
+const book = { title: "1984", author: "George Orwell" };
+const { title, author, publisher = "Unknown Publisher", year = 1949 } = book;
+console.log(title); // "1984"
+console.log(author); // "George Orwell"
+console.log(publisher); // "Unknown Publisher" (default value)
+console.log(year); // 1949 (default value)
+
+//----- These examples demonstrate how default values ensure that destructured variables always have meaningful values even if some properties are missing from the object. -------//
