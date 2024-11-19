@@ -223,3 +223,60 @@ console.log(m); // 10
 console.log(n); // 5
 
 //------These examples illustrate how swapping can be used across various scenarios, including numbers, strings, booleans, array elements, nested arrays, and within functions.------//
+
+//------Solved Problems: Rest Operator with Destructuring------//
+
+//-------1. Collecting Remaining Elements-------//
+
+const fruits = ["apple", "banana", "cherry", "date"];
+const [firstFruit, ...otherFruits] = fruits;
+console.log(firstFruit); // "apple"
+console.log(otherFruits); // ["banana", "cherry", "date"]
+
+//----------2. Skipping and Using Rest---------//
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const [num1, , num3, ...remainingNumbers] = numbers;
+console.log(num1); // 1
+console.log(num3); // 3
+console.log(remainingNumbers); // [4, 5, 6]
+
+//-----------3. Rest with Default Values--------//
+
+const colors = ["red", "blue"];
+const [primaryColor, secondaryColor, ...otherColors] = colors;
+console.log(primaryColor); // "red"
+console.log(secondaryColor); // "blue"
+console.log(otherColors); // [] (no remaining elements)
+
+//-----------4. Rest Operator in Nested Arrays----------//
+
+const nestedArray = [[1, 2], [3, 4], [5, 6]];
+const [[a, b], ...remainingPairs] = nestedArray;
+console.log(a); // 1
+console.log(b); // 2
+console.log(remainingPairs); // [[3, 4], [5, 6]]
+
+//-----------5. Rest Operator in Functions----------//
+
+function addNumbers(first, second, ...rest) {
+    const sumOfRest = rest.reduce((acc, num) => acc + num, 0);
+    return first + second + sumOfRest;
+}
+console.log(addNumbers(10, 20, 30, 40)); // 100
+
+//------------6. Combining Rest with Strings--------//
+
+const letters = ["a", "b", "c", "d", "e"];
+const [firstLetter, ...remainingLetters] = letters;
+console.log(firstLetter); // "a"
+console.log(remainingLetters.join("-")); // "b-c-d-e"
+
+//------------7. Rest Operator with Object Destructuring------//
+
+const student = { name: "Ali", age: 21, grade: "A", subject: "Math" };
+const { name, ...details } = student;
+console.log(name); // "Ali"
+console.log(details); // { age: 21, grade: "A", subject: "Math" }
+
+//---- These examples show how the rest operator can be used with arrays, nested arrays, strings, and even functions or objects to handle remaining elements or properties effectively. ------//
