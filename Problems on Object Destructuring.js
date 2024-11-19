@@ -69,3 +69,65 @@ printProductDetails(product);
 // Stock Status: In Stock
 
 //------  These examples showcase the flexibility and convenience of object destructuring in JavaScript, making code more readable and manageable. ----------//
+
+//--------Solved Problems: Renaming Variables in Object Destructuring-------//
+
+//--------1. Renaming Properties----------//
+
+const user = { username: "ali123", email: "ali@example.com" };
+const { username: userName, email: userEmail } = user;
+console.log(userName); // "ali123"
+console.log(userEmail); // "ali@example.com"
+
+//----------2. Renaming with Default Values---------//
+
+const student = { id: 101, marks: 85 };
+const { id: studentId, marks: totalMarks, grade = "A" } = student;
+console.log(studentId); // 101
+console.log(totalMarks); // 85
+console.log(grade); // "A" (default value)
+
+//-------------3. Nested Object with Renaming--------//
+
+const employee = { details: { empName: "Usman", age: 40 }, department: "HR" };
+const { details: { empName: employeeName, age: employeeAge }, department: dept } = employee;
+console.log(employeeName); // "Usman"
+console.log(employeeAge); // 40
+console.log(dept); // "HR"
+
+//----------4. Renaming Inside a Function Parameter-------//
+
+function displayDetails({ firstName: fName, lastName: lName }) {
+    console.log(`First Name: ${fName}`);
+    console.log(`Last Name: ${lName}`);
+}
+const person = { firstName: "Ahmed", lastName: "Khan" };
+displayDetails(person);
+// Output:
+// First Name: Ahmed
+// Last Name: Khan
+
+//--------5. Using Rest Operator with Renamed Variables---------//
+
+const car = { brand: "Toyota", model: "Corolla", year: 2021 };
+const { brand: carBrand, ...otherDetails } = car;
+console.log(carBrand); // "Toyota"
+console.log(otherDetails); // { model: "Corolla", year: 2021 }
+
+//---------6. Renaming and Default Value Together----------//
+
+const movie = { title: "Inception", director: "Christopher Nolan" };
+const { title: movieTitle, director: movieDirector, rating: movieRating = "9.0" } = movie;
+console.log(movieTitle); // "Inception"
+console.log(movieDirector); // "Christopher Nolan"
+console.log(movieRating); // "9.0" (default value)
+
+//----------7. Renaming for Better Readability-------------//
+
+const product = { id: 202, price: 299.99, stock: 50 };
+const { id: productId, price: productPrice, stock: productStock } = product;
+console.log(productId); // 202
+console.log(productPrice); // 299.99
+console.log(productStock); // 50
+
+//------ These examples demonstrate how renaming variables during object destructuring can improve code readability and make variables more meaningful. -------//
