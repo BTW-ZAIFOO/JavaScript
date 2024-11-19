@@ -280,3 +280,75 @@ console.log(name); // "Ali"
 console.log(details); // { age: 21, grade: "A", subject: "Math" }
 
 //---- These examples show how the rest operator can be used with arrays, nested arrays, strings, and even functions or objects to handle remaining elements or properties effectively. ------//
+
+//------Solved Problems: Nested Array Destructuring----------//
+
+//----- 1. Nested Arrays with Skipping Elements ------//
+
+const data = [1, [2, 3, 4], 5];
+const [a, [, b, c], d] = data;
+console.log(a); // 1
+console.log(b); // 3
+console.log(c); // 4
+console.log(d); // 5
+
+//---------2. Unpacking Deeply Nested Arrays--------//
+
+const nestedNumbers = [10, [20, [30, 40]], 50];
+const [x, [y, [z, w]], u] = nestedNumbers;
+console.log(x); // 10
+console.log(y); // 20
+console.log(z); // 30
+console.log(w); // 40
+console.log(u); // 50
+
+//----------3. Nested Arrays with Default Values-------//
+
+const arrayWithDefaults = [1, [2]];
+const [p, [q, r = 3], s = 4] = arrayWithDefaults;
+console.log(p); // 1
+console.log(q); // 2
+console.log(r); // 3 (default value)
+console.log(s); // 4 (default value)
+
+//----------4. Extracting Elements from Mixed Nested Arrays------//
+
+const mixedArray = [[10, 20], "text", [30, 40]];
+const [[num1, num2], text, [num3, num4]] = mixedArray;
+console.log(num1); // 10
+console.log(num2); // 20
+console.log(text); // "text"
+console.log(num3); // 30
+console.log(num4); // 40
+
+//--------------5. Partial Destructuring---------//
+
+const data = [1, [2, 3, [4, 5]]];
+const [m, [, n, [o]]] = data;
+console.log(m); // 1
+console.log(n); // 3
+console.log(o); // 4
+
+//--------------6. Destructuring Nested Arrays in a Function-------//
+
+function getCoordinates([x, [y, z]]) {
+    console.log(`X: ${x}, Y: ${y}, Z: ${z}`);
+}
+getCoordinates([100, [200, 300]]); // X: 100, Y: 200, Z: 300
+
+//------------7. Using Nested Destructuring in Loops---------//
+
+const points = [
+    [1, [2, 3]],
+    [4, [5, 6]],
+    [7, [8, 9]]
+];
+for (const [a, [b, c]] of points) {
+    console.log(`A: ${a}, B: ${b}, C: ${c}`);
+}
+// Output:
+// A: 1, B: 2, C: 3
+// A: 4, B: 5, C: 6
+// A: 7, B: 8, C: 9
+
+//----- These problems demonstrate how nested array destructuring can simplify the process of unpacking complex, multi-level arrays.  ----//
