@@ -167,3 +167,59 @@ console.log(y); // 7
 
 //-------These examples demonstrate different scenarios of applying default values in array destructuring, including nested arrays, skipping elements, and rest operators. --------//
 
+//---------Solved Problems: Swapping Values with Array Destructuring------//
+
+//--------1. Swapping Numbers--------//
+
+let x = 1;
+let y = 2;
+[x, y] = [y, x];
+console.log(x); // 2
+console.log(y); // 1
+
+//--------2. Swapping Strings--------//
+
+let firstName = "Ali";
+let lastName = "Khan";
+[firstName, lastName] = [lastName, firstName];
+console.log(firstName); // "Khan"
+console.log(lastName); // "Ali"
+
+//---------3. Swapping Boolean Values-------//
+
+let isDay = true;
+let isNight = false;
+[isDay, isNight] = [isNight, isDay];
+console.log(isDay); // false
+console.log(isNight); // true
+
+//----------4. Swapping Array Elements---------//
+
+let numbers = [10, 20];
+[numbers[0], numbers[1]] = [numbers[1], numbers[0]];
+console.log(numbers); // [20, 10]
+
+//----------5. Swapping Nested Array Elements------//
+
+let nested = [[1, 2], [3, 4]];
+[nested[0], nested[1]] = [nested[1], nested[0]];
+console.log(nested); // [[3, 4], [1, 2]]
+
+//----------6. Swapping Variables in a Function--------//
+
+function swap(a, b) {
+    return [a, b] = [b, a];
+}
+let p = 7, q = 14;
+[p, q] = swap(p, q);
+console.log(p); // 14
+console.log(q); // 7
+
+//----------7. Swapping Default Values----------------//
+
+let m = 5, n = 10;
+[m = 0, n = 0] = [n, m];
+console.log(m); // 10
+console.log(n); // 5
+
+//------These examples illustrate how swapping can be used across various scenarios, including numbers, strings, booleans, array elements, nested arrays, and within functions.------//
