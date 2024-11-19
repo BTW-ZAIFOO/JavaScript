@@ -56,3 +56,58 @@ console.log(x); // 2
 console.log(y); // 1
 
 //---------------------------These examples demonstrate various applications of array destructuring, such as assigning variables, skipping elements, using default values, working with nested arrays, leveraging the rest operator, and even applying destructuring in functions.----------------------------------//
+
+//------------Solved Problems: Skipping Elements in Array Destructuring--------//
+
+//-------------1. Skipping a Single Element---------//
+
+const numbers = [10, 20, 30];
+const [first, , third] = numbers;
+console.log(first); // 10
+console.log(third); // 30
+
+//------------2. Skipping Multiple Elements------//
+
+const colors = ["Red", "Blue", "Green", "Yellow", "Purple"];
+const [primary, , secondary, , tertiary] = colors;
+console.log(primary); // "Red"
+console.log(secondary); // "Green"
+console.log(tertiary); // "Purple"
+
+//-----------3. Skipping Elements with Default Values-----//
+
+const fruits = ["Apple", "Banana", "Cherry"];
+const [fruit1, , fruit3 = "Orange"] = fruits;
+console.log(fruit1); // "Apple"
+console.log(fruit3); // "Cherry"
+
+//------------4. Skipping While Using Rest Operator--------//
+
+const animals = ["Lion", "Tiger", "Elephant", "Deer", "Zebra"];
+const [firstAnimal, , , ...remainingAnimals] = animals;
+console.log(firstAnimal); // "Lion"
+console.log(remainingAnimals); // ["Deer", "Zebra"]
+
+//-------------5. Skipping Nested Elements---------//
+
+const nestedArray = [1, [2, 3], 4, 5];
+const [, [, thirdValue], fourthValue] = nestedArray;
+console.log(thirdValue); // 3
+console.log(fourthValue); // 4
+
+//--------------6. Skipping in Function Parameters--------//
+
+function getMiddleValue([, second, , fourth]) {
+    return `Second: ${second}, Fourth: ${fourth}`;
+}
+const values = [10, 20, 30, 40];
+console.log(getMiddleValue(values)); // "Second: 20, Fourth: 40"
+
+//-------------7. Skipping While Swapping---------------//
+
+let arr = [1, 2, 3, 4];
+[arr[0], , arr[2]] = [arr[2], , arr[0]];
+console.log(arr); // [3, 2, 1, 4]
+
+//-------- These examples showcase how to skip elements while destructuring arrays, ranging from basic skipping to incorporating nested arrays, rest operators, and function parameter use cases. --------//
+
