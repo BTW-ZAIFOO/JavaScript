@@ -352,3 +352,65 @@ for (const [a, [b, c]] of points) {
 // A: 7, B: 8, C: 9
 
 //----- These problems demonstrate how nested array destructuring can simplify the process of unpacking complex, multi-level arrays.  ----//
+
+//-------Solved Problems: Destructuring in Function Parameters-------//
+
+//--------1. Passing Arrays to Functions--------//
+
+function multiply([a, b, c]) {
+    return a * b * c;
+}
+const nums = [2, 3, 4];
+console.log(multiply(nums)); // 24
+
+//---------2. Using Default Values in Destructuring-------//
+
+function divide([a, b, c = 1]) {
+    return a / b / c;
+}
+const numbers = [100, 10];
+console.log(divide(numbers)); // 10 (c defaults to 1)
+
+//-------3. Nested Array Destructuring in Function Parameters------//
+
+function getCoordinates([[x, y], [z, w]]) {
+    return `Coordinates: (${x}, ${y}) and (${z}, ${w})`;
+}
+const coords = [[1, 2], [3, 4]];
+console.log(getCoordinates(coords)); // "Coordinates: (1, 2) and (3, 4)"
+
+//-------4. Rest Operator in Function Parameters-------//
+
+function sum([first, second, ...rest]) {
+    return first + second + rest.reduce((acc, num) => acc + num, 0);
+}
+const numbersList = [5, 10, 15, 20, 25];
+console.log(sum(numbersList)); // 75
+
+//------5. Skipping Elements in Function Parameters-----//
+
+function extractThird([, , third]) {
+    return third;
+}
+const values = [10, 20, 30, 40];
+console.log(extractThird(values)); // 30
+
+//--------6. Combining Arrays with Destructuring------//
+
+function mergeAndDouble([a, b], [c, d]) {
+    return [a * 2, b * 2, c * 2, d * 2];
+}
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+console.log(mergeAndDouble(arr1, arr2)); // [2, 4, 6, 8]
+
+//--------7. Destructuring with Mixed Parameters------//
+
+function describe([name, age], { job, city }) {
+    return `${name}, ${age} years old, works as a ${job} in ${city}.`;
+}
+const person = ["Ahmed", 30];
+const details = { job: "developer", city: "Karachi" };
+console.log(describe(person, details)); // "Ahmed, 30 years old, works as a developer in Karachi."
+
+//---- These examples highlight the versatility of destructuring in function parameters, whether you're working with simple arrays, nested arrays, or combining arrays with objects.  ----//
