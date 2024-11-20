@@ -63,10 +63,12 @@ function printProductDetails({ productName, price, stock = "In Stock" }) {
 }
 const product = { productName: "Smartphone", price: 699 };
 printProductDetails(product);
-// Output:
-// Product: Smartphone
-// Price: $699
-// Stock Status: In Stock
+
+// Output://
+
+Product: Smartphone
+Price: $699
+Stock Status: In Stock
 
 //------  These examples showcase the flexibility and convenience of object destructuring in JavaScript, making code more readable and manageable. ----------//
 
@@ -103,9 +105,11 @@ function displayDetails({ firstName: fName, lastName: lName }) {
 }
 const person = { firstName: "Ahmed", lastName: "Khan" };
 displayDetails(person);
-// Output:
-// First Name: Ahmed
-// Last Name: Khan
+
+// Output://
+
+First Name: Ahmed
+Last Name: Khan
 
 //--------5. Using Rest Operator with Renamed Variables---------//
 
@@ -164,9 +168,11 @@ function displayDetails({ name, age = 30 }) {
 }
 const person = { name: "Sara" };
 displayDetails(person);
-// Output:
-// Name: Sara
-// Age: 30 (default value)
+
+// Output://
+
+Name: Sara
+Age: 30 (default value)
 
 //--------5. Combining Default and Actual Values------//
 
@@ -250,9 +256,11 @@ function displayOrder({ details: { item, quantity } }) {
   console.log(`Quantity: ${quantity}`);
 }
 displayOrder(order);
-// Output:
-// Item: Laptop
-// Quantity: 2
+
+// Output://
+
+Item: Laptop
+Quantity: 2
 
 //-------5. Destructuring Multiple Nested Levels------//
 
@@ -296,3 +304,100 @@ console.log(studentName); // "Hassan"
 console.log(studentGrade); // "A"
 
 //----- These examples cover a range of use cases for nested object destructuring, showcasing how to access and manipulate deeply nested properties with ease -----//
+
+//------Solved Problems: Object Destructuring in Function Parameters----//
+
+//---------------1. Extracting Properties--------//
+
+function displayCar({ brand, model }) {
+  console.log(`This car is a ${brand} ${model}.`);
+}
+
+const car = { brand: "Toyota", model: "Corolla" };
+displayCar(car);
+
+// Output://
+
+This car is a Toyota Corolla.
+
+//----------2. Using Default Values---------//
+
+function greetUser({ name, age = 25 }) {
+  console.log(`Hello, ${name}. You are ${age} years old.`);
+}
+
+const user = { name: "Ali" };
+greetUser(user);
+
+// Output: //
+
+Hello, Ali. You are 25 years old.
+
+//------------3. Nested Destructuring---------//
+
+function displayStudent({ name, subjects: { major, minor } }) {
+  console.log(`${name} is majoring in ${major} and minoring in ${minor}.`);
+}
+
+const student = { name: "Hassan", subjects: { major: "Physics", minor: "Math" } };
+displayStudent(student);
+
+// Output://
+
+Hassan is majoring in Physics and minoring in Math.
+
+//-----------4. Destructuring with Renamed Variables-------//
+
+function getEmployeeDetails({ id: empId, department: dept }) {
+  console.log(`Employee ID: ${empId}, Department: ${dept}`);
+}
+
+const employee = { id: 101, department: "HR" };
+getEmployeeDetails(employee);
+
+// Output: //
+
+Employee ID: 101, Department: HR
+
+//-----------5. Passing Objects with Extra Properties-----//
+
+function printProductDetails({ name, price }) {
+  console.log(`Product: ${name}, Price: $${price}`);
+}
+
+const product = { name: "Laptop", price: 1200, manufacturer: "Dell" };
+printProductDetails(product);
+
+// Output://
+
+Product: Laptop, Price: $1200
+
+//----------6. Using Rest Operator-----------//
+
+function showPersonInfo({ name, ...otherDetails }) {
+  console.log(`Name: ${name}`);
+  console.log("Other Details:", otherDetails);
+}
+
+const person = { name: "Ahmed", age: 30, city: "Karachi" };
+showPersonInfo(person);
+
+// Output://
+
+Name: Ahmed
+Other Details: { age: 30, city: 'Karachi' }
+
+//-----------------7. Combining Default Values and Nested Destructuring------//
+
+function describePet({ type, details: { breed = "unknown", age = 1 } }) {
+  console.log(`This is a ${type}, breed: ${breed}, age: ${age} year(s).`);
+}
+
+const pet = { type: "dog", details: { breed: "Labrador" } };
+describePet(pet);
+
+// Output://
+
+This is a dog, breed: Labrador, age: 1 year(s).
+
+//----- These examples showcase various ways to use object destructuring in function parameters, including default values, nested properties, renaming, and handling extra data.  --------//
