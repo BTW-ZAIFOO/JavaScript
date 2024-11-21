@@ -1,3 +1,7 @@
+//-------Imp Point---------//
+
+//------ the push() method adds elements to the end of an array, and unshift() adds elements to the beginning. ---------//
+
 //----1. push()---//
 
 // Problem 1: Add a new fruit to the fruits array//
